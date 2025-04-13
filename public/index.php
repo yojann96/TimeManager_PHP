@@ -11,27 +11,35 @@
 </head>
 <body>
 
-<div class="form-group">
+<div class=" col form-group">
 
     <h1>Tareas del Usuario</h1>
     
-    <label for="labeluserId"><strong> Nro usuario a buscar: </strong></label>
-    &nbsp;
-    <input type="number" class="form-control col-sm-2" id="userId" placeholder="ID del Usuario">
-    <button class="btn btn-outline-info" onclick="getTasks()">Obtener Tareas</button>
+    <div class="col row">
+        <label for="labeluserId"><strong> Nro usuario a buscar: </strong></label> &nbsp;
+        <input type="number" class="form-control col-sm-2" id="userId" placeholder="ID del Usuario">&nbsp;
+        <button class="btn btn-outline-info" onclick="getTasks()">
+            Obtener Tareas
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+        </button>
+    </div>
     
-    <table border="1" id="taskTable" style="margin-top:20px;" class="table">
-        <thead class="thead-light">
-            <tr>
-                <th>Proyecto</th>
-                <th>Descripción</th>
-                <th>Horas</th>
-                <th>Tarifa</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+    <div class="col">
+        <table border="1" id="taskTable" style="margin-top:20px;" class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Proyecto</th>
+                    <th>Descripción</th>
+                    <th>Horas</th>
+                    <th>Tarifa</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
     <script>
         function getTasks() {
